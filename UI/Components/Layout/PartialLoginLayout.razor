@@ -1,0 +1,84 @@
+@namespace Trinode.UI.Components.Layouts
+@using Microsoft.AspNetCore.Hosting
+@inject IWebHostEnvironment Environment
+@inherits LayoutComponentBase
+
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    @if (Environment.IsDevelopment())
+    {
+        <link rel="stylesheet" href="~/Identity/lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/Identity/css/site.css" />
+    }
+    else
+    {
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+              integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous" />
+        <link rel="stylesheet" href="~/Identity/lib/bootstrap/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="~/Identity/css/site.css" />
+    }
+    <link rel="stylesheet" href="css/loginPartial.css" />
+</head>
+
+
+<style>
+    body {
+       background-image: linear-gradient(to bottom, #06004B 0%, #06004B 80%, #013050 100%);
+       height: 1100px;
+    }
+    section{
+        padding: 10px;
+        height: 350px;
+    }
+</style>
+
+
+<body>
+    <div class="left-side">
+        <div class="login-container container">
+            <section>
+                <div style="margin-top: 5px;">
+                    <main role="main" class="pb-1">
+                        @Body
+                    </main>
+                </div>
+            </section>
+        </div>
+    </div>
+    <div class="right-side">
+        <div class="image-right">
+            <img src="imgs/trinode_lg.png" alt="Login Image"/>
+        </div>
+    </div>
+    @if (Environment.IsDevelopment())
+    {
+        <script src="~/Identity/lib/jquery/dist/jquery.js"></script>
+        <script src="~/Identity/lib/bootstrap/dist/js/bootstrap.bundle.js"></script>
+        <script src="~/Identity/js/site.js"></script>
+    }
+    else
+    {
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+                crossorigin="anonymous"
+                integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2">
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+                crossorigin="anonymous"
+                integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj">
+        </script>
+        <script src="~/Identity/js/site.js"></script>
+    }
+
+    @if (AdditionalScripts != null)
+    {
+        @AdditionalScripts
+    }
+</body>
+
+@code {
+    [Parameter]
+    public RenderFragment AdditionalScripts { get; set; }
+}

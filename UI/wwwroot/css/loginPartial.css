@@ -1,0 +1,160 @@
+
+.login-container {
+    width: 500px;
+    margin: 0 auto;
+    position: relative;
+    top: 48%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    padding: 80px;
+    height: 400px;
+    margin-top: 500px;
+    padding-right: 50px;
+    padding-left: 50px;
+    border: 1px solid #0a0c11;
+    border-radius: 5px;
+    box-shadow: 0 0 20px 5px #01416b;
+}
+
+.login-box
+{
+    text-align: center;
+    align-items: center;
+    width: 150%;
+    height: auto;
+    margin-left: -71px;
+    margin-top: -10px;
+    padding: 80px;
+}
+
+.background-color {
+    background-image: linear-gradient(to bottom, #06004B, #06004B, #016288);
+}
+
+.login-title {
+    text-align: center;
+    position: absolute;
+    top: 9%; /* Ajustado para mover para o topo do .login-container */
+    left: 60%; /* Posiciona a metade do elemento à esquerda para centralizar horizontalmente */
+    transform: translateX(-50%); /* Ajusta para centralizar exatamente no meio horizontalmente */
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #ffffff;
+    width: 90%; /* Ajusta a largura para auto para acomodar o conteúdo */
+    padding: 0 20px; /* Adiciona padding lateral para garantir que o texto não toque as bordas */
+    box-sizing: border-box; 
+}
+
+.login-button:hover {
+    background-color:#10568f;
+}
+
+.body-content {
+    .body-content {
+        background-color: #eaecf1;
+    }
+}
+
+
+.left-side {
+    width: 50%;
+    float: left;
+}
+
+.right-side {
+    width: 50%;
+    float: right
+}
+
+
+.login-button:focus {
+    border: 2px solid #06004B;
+}
+
+.login-button {
+    background-color: #029ac0;
+    border-color: #06004B;
+    color: white;
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    border: none;
+}
+.login-button:hover
+{
+    background-color: #0254a0ab;
+}
+
+.form-control, .form-control:focus, .btn-primary, .btn-primary:hover {
+    background-color: #0254a0ab; /* Exemplo de transparência usando rgba */
+    border-color: black; /* Exemplo de transparência usando rgba */
+    color: white;
+}
+
+.vertical-line {
+    width: 1px; /* Largura da linha */
+    height: 58%; /* Altura da linha */
+    background-color: rgb(22, 15, 15); /* Cor da linha */
+    position: fixed; /* Fixa a linha na posição */
+    top: 19%;
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translateX(-50%); /* Ajusta para o centro exato */
+}
+
+.image-right
+{
+    top: 50%;
+    box-orient: vertical;
+    margin-top: -120px;
+    position: absolute;
+    left: 55%;
+}
+
+
+.forget-password, .create-account {
+    color: #eaecf1;
+    text-align: center;
+    margin-top: 30px;
+}
+
+
+@media (max-width: 1200px) {
+    .login-container {
+        width: 90%; /* Ajusta a largura para dispositivos móveis */
+        height: auto; /* Altura automática para acomodar o conteúdo */
+        padding: 120px;
+        padding-right: 50px;
+        padding-left: 50px;
+        top: 50%; /* Centraliza verticalmente */
+        left: 50%; /* Centraliza horizontalmente */
+        transform: translate(-50%, -50%);
+    }
+
+    .login-title {
+        text-align: center;
+        position: absolute;
+        top: 10%;
+        font-size: 24px;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-bottom: 20px;
+        color: #ffffff;
+    }
+    
+    .vertical-line {
+        display: none; /* Remove a linha vertical */
+    }
+
+    .image-right {
+        position: relative;
+        margin-top: 20px; 
+        width: 100%; 
+        box-orient: horizontal; 
+        display: none;
+    }
+
+    .left-side, .right-side {
+        width: 100%; /* Ajusta a largura para ocupar todo o espaço disponível */
+        float: none; /* Remove o float */
+    }
+}
